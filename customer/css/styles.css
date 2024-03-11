@@ -1,0 +1,14 @@
+body{
+  background: 
+  url('../../assets/website-images/yellow_lines.svg') 0 0 / cover no-repeat;
+}
+.back-lines {
+  background: 
+    url('../../assets/website-images/white_lines.svg')  0 0 / 150vh no-repeat,
+
+    #FFDE30
+  ;
+}
+h1 {
+  font-family: 'space grotesk';
+}

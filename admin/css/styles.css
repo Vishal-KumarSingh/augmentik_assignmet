@@ -1,0 +1,17 @@
+*{
+  /* border: 1px solid red !important; */
+}
+body{
+  background: 
+  url('../assets/yellow_lines.svg') 0 0 / cover no-repeat;
+}
+.back-lines {
+  background: 
+    url('../assets/white_lines.svg')  0 0 / 150vh no-repeat,
+
+    #FFDE30
+  ;
+}
+h1 {
+  font-family: 'space grotesk';
+}

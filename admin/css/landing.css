@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+* {
+  font-family: "montserrat";
+}
+h1, button{
+  font-family: "syne"  !important;
+}
+.main-sec {
+  background: url("../assets/faded_yellow_circle.svg") 0 0 / cover
+    no-repeat;
+}
+.low{
+  z-index: -1 !important;
+  width: 1%;
+  animation: grow 7s infinite;
+}
+@keyframes grow {
+  30%{
+    width: 105%;
+  }
+  50%{
+    width: 0%;
+  }
+}

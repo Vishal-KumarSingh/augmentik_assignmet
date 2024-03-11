@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="//cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/admin_dash.css" />
+</head>
+
+<body class="flex">
+  <nav class="basis-1/5 px-10 py-5 gap-10 h-full hidden lg:flex flex-col justify-between sticky top-0 h-screen">
+    <div class="space-y-10">
+      <h1 class="text-4xl font-semibold text-[#1A436E]">
+        <img src="../assets/website-images/logo_small.svg" />
+      </h1>
+      <div class="flex flex-col gap-3">
+        <a href="./admin_dashboard.html"
+          class="text-lg px-4 items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 px-5 py-2 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3 8.48885C3 7.88282 3.3424 7.3288 3.88446 7.05777L11.2845 3.35777C11.7349 3.13255 12.2651 3.13255 12.7155 3.35777L20.1155 7.05777C20.6576 7.3288 21 7.88282 21 8.48885V19.4C21 20.2837 20.2837 21 19.4 21H4.6C3.71634 21 3 20.2837 3 19.4V8.48885Z"
+              stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+          Dashboard</a>
+        <a href="./order_logs.html"
+          class="text-lg px-4 items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-3 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="22" height="21" viewBox="0 0 22 21"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5 4.78369H18.7296C19.836 4.78369 20.6085 5.87984 20.2364 6.92183L18.5221 11.7218C18.2947 12.3586 17.6915 12.7837 17.0153 12.7837H5"
+              stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M1 1L4.5 4.86207V15.4C4.5 16.2837 5.21634 17 6.1 17H16" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="7" cy="19.8379" r="1" fill="#94A3B8" />
+            <circle cx="13.4863" cy="19.8379" r="1" fill="#94A3B8" />
+          </svg>
+
+          Order Logs</a>
+        <a href="./user_list.html"
+          class="text-lg items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-3 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M20 20L19.2501 17.1877C19.0633 16.4873 18.429 16 17.7041 16H6.29591C5.57103 16 4.93671 16.4873 4.74994 17.1877L4 20"
+              stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          User List</a>
+        <a href="./payment_logs.html"
+          class="text-lg items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-3 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="16" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M9 4V11L12 9.5L15 11V4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          Payment Logs</a>
+        <a href="./services.html"
+          class="text-lg items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-3 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="4" height="8" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <rect x="2" y="14" width="4" height="4" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <rect x="18" y="6" width="4" height="12" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+          Services</a>
+        <a href="./order_logs.html"
+          class="text-lg items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-3 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="5" width="18" height="16" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="7" cy="16" r="1" fill="#94A3B8" />
+            <circle cx="17" cy="16" r="1" fill="#94A3B8" />
+            <circle cx="12" cy="16" r="1" fill="#94A3B8" />
+            <path d="M6 11H18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 7L16 3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8 7L8 3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          Order logs</a>
+        <a href="./plansAndPricing.html"
+          class="text-lg items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-3 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="18" height="20" viewBox="0 0 18 20"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="16" height="18" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M6 6H12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 10H10" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 14H12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          Pricing Plans</a>
+        <a href="support_ticket.html"
+          class="text-lg items-center border border-transparent flex gap-7 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-3 rounded-xl">
+          <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="16" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M9 4V11L12 9.5L15 11V4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          Support</a>
+      </div>
+    </div>
+    <div class="flex justify-between items-center mb-5">
+      <div class="flex items-center gap-5 text-xl font-semibold">
+        <div class="img bg-gray-400 bg-center bg-cover aspect-square w-6 md:w-10 rounded-full"></div>
+        Nguyen and Duc
+      </div>
+      <svg width="4" height="12" viewBox="0 0 4 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0 2C0 3.10457 0.89543 4 2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0C0.895431 0 0 0.89543 0 2ZM0 10C0 11.1046 0.89543 12 2 12C3.10457 12 4 11.1046 4 10C4 8.89543 3.10457 8 2 8C0.895431 8 0 8.89543 0 10Z"
+          fill="#3B82F6" />
+      </svg>
+    </div>
+  </nav>
+  <main class="w-full xl:basis-4/5 px-3 py-4 md:p-10 bg-[#FFFFEF] flex flex-col gap-5 md:gap-10">
+    <div class="flex justify-between items-center">
+      <label class="inline-flex items-center cursor-pointer block md:hidden">
+        <input type="checkbox" value="" class="sr-only peer" /><svg width="38" height="38" viewBox="0 0 38 38"
+          fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect width="38" height="38" fill="url(#pattern0)" />
+          <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_877_14031" transform="scale(0.0111111)" />
+            </pattern>
+            <image id="image0_877_14031" width="90" height="90"
+              xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA50lEQVR4nO3bO07EMABFUQvpFcOm2QMfMeugtetZDtBAERdBoQfhFBNLnCNlA0+WI+XOlAIAAAAAAADAcdaXcttbnpaW996yevLjBkvNW695XC/lNDx0rzkbN2MHrOY8dprvys1S82noDA29tHxs2xm6TTa0qyP7xq55Hrugt+vjUk695uH7ovcyXH89yTWvveV+18sQAAAAAOCfE2fz97Iizua69V6czVWGFmfbpENv/K4j4myfLBaLswAAAAAA+4mzEWf7BB/7xdl2YGnxz9nMOfRGnI0424++i8VZAAAAAAAAgDKlL1qM9cb0cMs2AAAAAElFTkSuQmCC" />
+          </defs>
+        </svg>
+        <div
+          class="absolute top-16 left-3 peer-checked:flex peer hidden flex-col px-3 py-4 bg-white z-50 rounded-xl border border-gray-300 shadow-xl gap-3 text-xl font-semibold">
+          <a href="./admin_dashboard.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3 8.48885C3 7.88282 3.3424 7.3288 3.88446 7.05777L11.2845 3.35777C11.7349 3.13255 12.2651 3.13255 12.7155 3.35777L20.1155 7.05777C20.6576 7.3288 21 7.88282 21 8.48885V19.4C21 20.2837 20.2837 21 19.4 21H4.6C3.71634 21 3 20.2837 3 19.4V8.48885Z"
+                stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+            Dashboard</a>
+          <a href="./order_logs.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="22" height="21" viewBox="0 0 22 21"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 4.78369H18.7296C19.836 4.78369 20.6085 5.87984 20.2364 6.92183L18.5221 11.7218C18.2947 12.3586 17.6915 12.7837 17.0153 12.7837H5"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M1 1L4.5 4.86207V15.4C4.5 16.2837 5.21634 17 6.1 17H16" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="7" cy="19.8379" r="1" fill="#94A3B8" />
+              <circle cx="13.4863" cy="19.8379" r="1" fill="#94A3B8" />
+            </svg>
+
+            Order Logs</a>
+          <a href="./user_list.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M20 20L19.2501 17.1877C19.0633 16.4873 18.429 16 17.7041 16H6.29591C5.57103 16 4.93671 16.4873 4.74994 17.1877L4 20"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            User List</a>
+          <a href="./payment_logs.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="16" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M9 4V11L12 9.5L15 11V4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            Payment Logs</a>
+          <a href="./services.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="4" height="8" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="2" y="14" width="4" height="4" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="18" y="6" width="4" height="12" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+            Services</a>
+          <a href="./order_logs.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="5" width="18" height="16" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="7" cy="16" r="1" fill="#94A3B8" />
+              <circle cx="17" cy="16" r="1" fill="#94A3B8" />
+              <circle cx="12" cy="16" r="1" fill="#94A3B8" />
+              <path d="M6 11H18" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 7L16 3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8 7L8 3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            Order logs</a>
+          <a href="./plansAndPricing.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="18" height="20" viewBox="0 0 18 20"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="16" height="18" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M6 6H12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6 10H10" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6 14H12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            Pricing Plans</a>
+          <a href="./support_ticket.html"
+            class="text-lg items-center border border-transparent flex gap-5 group hover:text-[#FFDE30] hover:border-[#FFDE30] hover:bg-[#FFDE30]/10 hover:border px-5 py-2 rounded-xl">
+            <svg class="stroke-[#94A3B8] group-hover:stroke-[#FFDE30]" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="16" rx="1.6" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M9 4V11L12 9.5L15 11V4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            Support</a>
+        </div>
+      </label>
+
+      <h1 class="text-2xl font-semibold text-[#1A436E] block md:hidden">
+        <img src="../assets/website-images/logo_small.svg" class="h-12" />
+      </h1>
+
+      <div class="relative md:block hidden">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="5.65685" transform="rotate(-45 8 8)" stroke="#0F172A" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.334 12.3335L15.0007 15.0002" stroke="#0F172A" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <input type="search" id="default-search"
+          class="block w-full px-4 py-2 md:py-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white outline-none focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Search by name or data" />
+      </div>
+      <div class="flex gap-3 md:gap-5 items-center">
+        <svg class="md:block hidden" width="22" height="22" viewBox="0 0 22 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="8" height="8" rx="1.6" stroke="#0F172A" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <rect x="13" y="1" width="8" height="8" rx="1.6" stroke="#0F172A" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <rect x="1" y="13" width="8" height="8" rx="1.6" stroke="#0F172A" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <rect x="13" y="13" width="8" height="8" rx="1.6" stroke="#0F172A" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 17L16.7745 7.72088C16.6836 3.98291 13.6273 1 9.88825 1V1C6.08397 1 3 4.08397 3 7.88825V17"
+            stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M8 21H12" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1 17L19 17" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <div class="img bg-gray-400 bg-center bg-cover aspect-square w-6 md:w-10 rounded-full"></div>
+      </div>
+    </div>
+
+    <!-- geos here -->
+    <div class="flex gap-5 md:gap-10 lg:flex-row flex-col">
+      <div class="flex-col p-7 bg-white border border-[#F4EF7D] rounded-3xl flex-1">
+        <div class="flex justify-between items-center">
+          <h1 class="text-4xl font-semibold">$120</h1>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+          </svg>
+        </div>
+        <p class="font-sans opacity-50">Total Revenue</p>
+        <p class="font-sans text-right">40% <b class="font-sans">$250</b></p>
+        <div class="progress mt-3 w-full h-7 overflow-hidden rounded-lg bg-[#DCFCE7]">
+          <div class="bar bg-[#4ADE80] w-1/2 h-full"></div>
+        </div>
+      </div>
+      <div class="flex-col p-7 bg-white border border-[#F4EF7D] rounded-3xl flex-1">
+        <div class="flex justify-between items-center">
+          <h1 class="text-4xl font-semibold">+420</h1>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+          </svg>
+        </div>
+        <p class="font-sans opacity-50">User Active</p>
+        <div class="graph mt-3">
+          <svg width="120" height="72" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="24" width="24" height="32" rx="8" fill="#E9E9C9" />
+            <g filter="url(#filter0_d_285_412)">
+              <path
+                d="M32 8C32 3.58172 35.5817 0 40 0H48C52.4183 0 56 3.58172 56 8V48C56 52.4183 52.4183 56 48 56H40C35.5817 56 32 52.4183 32 48V8Z"
+                fill="#FFDE30" />
+            </g>
+            <rect x="64" width="24" height="56" rx="8" fill="#E9E9C9" />
+            <rect x="96" y="32" width="24" height="24" rx="8" fill="#E9E9C9" />
+            <defs>
+              <filter id="filter0_d_285_412" x="24" y="0" width="40" height="72" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="8" />
+                <feGaussianBlur stdDeviation="4" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.388235 0 0 0 0 0.4 0 0 0 0 0.945098 0 0 0 0.24 0" />
+                <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_285_412" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_285_412" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="flex-col p-7 bg-white border rounded-3xl flex-1">
+        <div class="flex justify-between items-center">
+          <h1 class="text-4xl font-semibold">23</h1>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="0.537109" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="8" y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="8.53711" width="4" height="4" rx="0.8" fill="#64748B" />
+            <rect x="16" y="16.5371" width="4" height="4" rx="0.8" fill="#64748B" />
+          </svg>
+        </div>
+        <p class="font-sans opacity-50">Order Pending</p>
+        <div class="flex justify-between items-center">
+          <div class="map mt-3">
+            <svg width="114" height="48" viewBox="0 0 114 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_285_433)">
+                <rect width="114" height="48" rx="8" fill="#FAF5FF" />
+                <path d="M0 53.5L24 37.5H62L81.5 18H112" stroke="url(#paint0_linear_285_433)" stroke-width="2"
+                  stroke-linejoin="round" />
+                <rect x="79" width="8" height="48" fill="#F3E8FF" />
+                <rect x="79" y="46" width="8" height="2" fill="#A855F7" />
+                <g filter="url(#filter0_d_285_433)">
+                  <circle cx="83" cy="19" r="8" fill="white" />
+                  <circle cx="83" cy="19" r="7" stroke="#A855F7" stroke-width="2" />
+                </g>
+                <circle cx="83" cy="19" r="2" fill="#A855F7" />
+              </g>
+              <defs>
+                <filter id="filter0_d_285_433" x="67" y="11" width="32" height="32" filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dy="8" />
+                  <feGaussianBlur stdDeviation="4" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix type="matrix"
+                    values="0 0 0 0 0.658824 0 0 0 0 0.333333 0 0 0 0 0.968627 0 0 0 0.24 0" />
+                  <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_285_433" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_285_433" result="shape" />
+                </filter>
+                <linearGradient id="paint0_linear_285_433" x1="10" y1="53.5" x2="114.5" y2="53.5"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#A855F7" />
+                  <stop offset="1" stop-color="#A855F7" stop-opacity="0" />
+                </linearGradient>
+                <clipPath id="clip0_285_433">
+                  <rect width="114" height="48" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <p class="font-sans text-right leading-5">
+            <b class="font-sans">+32%</b> <br />
+            from last week
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex gap-10 xl:flex-row flex-col">
+      <div
+        class="flex-col flex py-7 px-5 md:p-7 bg-white border border-[#F4EF7D] rounded-3xl flex-1 basis-2/5 gap-4 md:gap-7">
+        <h1 class="text-2xl font-semibold">User Conversions</h1>
+        <div class="self-center w-full" id="userConversion"></div>
+      </div>
+      <div class="flex-col flex py-4 px-3 md:p-7 bg-white border border-[#F4EF7D] rounded-3xl flex-1 basis-3/5 gap-7">
+        <h1 class="text-2xl font-semibold px-3 md:px-0">User List</h1>
+        <div class="flex flex-col text-xs md:text-sm gap-5 overflow-auto md:w-fit max-h-[300px]">
+          <div class="grid grid-cols-[1fr_2fr_2fr_2fr_2fr_2fr_1fr] place-items-center font-sans md:w-full w-[500px]">
+            <div class="img bg-gray-400 bg-center bg-cover aspect-square w-6 md:w-10 rounded-full"></div>
+            <h2 class="w-full">James Smith</h2>
+            <h2 class="">$65.00</h2>
+            <p class="opacity-50 w-full">September 10 2024</p>
+            <p class="opacity-50">#B3231</p>
+            <div class="py-1 rounded-full bg-green-500 text-white text-center w-full">
+              Completed
+            </div>
+            <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="8" width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="16" width="4" height="4" rx="0.8" fill="#64748B" />
+            </svg>
+          </div>
+          <div class="grid grid-cols-[1fr_2fr_2fr_2fr_2fr_2fr_1fr] place-items-center font-sans md:w-full w-[500px]">
+            <div class="img bg-gray-400 bg-center bg-cover aspect-square w-6 md:w-10 rounded-full"></div>
+            <h2 class="w-full">Winona Chin</h2>
+            <h2 class="">$23.00</h2>
+            <p class="opacity-50 w-full">September 10 2024</p>
+            <p class="opacity-50">#B3231</p>
+            <div class="py-1 rounded-full bg-green-500 text-white text-center w-full">
+              Completed
+            </div>
+            <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="8" width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="16" width="4" height="4" rx="0.8" fill="#64748B" />
+            </svg>
+          </div>
+          <div class="grid grid-cols-[1fr_2fr_2fr_2fr_2fr_2fr_1fr] place-items-center font-sans md:w-full w-[500px]">
+            <div class="img bg-gray-400 bg-center bg-cover aspect-square w-6 md:w-10 rounded-full"></div>
+            <h2 class="w-full">Doe Henderson</h2>
+            <h2 class="">$11.00</h2>
+            <p class="opacity-50 w-full">September 11 2024</p>
+            <p class="opacity-50">#B3231</p>
+            <div class="py-1 rounded-full bg-red-500 text-white text-center w-full">
+              Refunded
+            </div>
+            <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="8" width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="16" width="4" height="4" rx="0.8" fill="#64748B" />
+            </svg>
+          </div>
+          <div class="grid grid-cols-[1fr_2fr_2fr_2fr_2fr_2fr_1fr] place-items-center font-sans md:w-full w-[500px]">
+            <div class="img bg-gray-400 bg-center bg-cover aspect-square w-6 md:w-10 rounded-full"></div>
+            <h2 class="w-full">Will Jean</h2>
+            <h2 class="">$32.00</h2>
+            <p class="opacity-50 w-full">September 23 2024</p>
+            <p class="opacity-50">#B3231</p>
+            <div class="py-1 rounded-full bg-green-500 text-white text-center w-full">
+              Completed
+            </div>
+            <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="8" width="4" height="4" rx="0.8" fill="#64748B" />
+              <rect y="16" width="4" height="4" rx="0.8" fill="#64748B" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <div
+        class="flex-col flex py-5 px-3 md:p-7 bg-white border border-[#F4EF7D] rounded-3xl flex-1 w-full lg:basis-2/5 gap-2 md:gap-7 basis-3/5">
+        <div class="flex justify-between">
+          <h1 class="text-2xl md:text-3xl font-semibold md:px-0 px-3">
+            User Activity
+          </h1>
+          <select class="bg-gray-200 px-2 py-1 font-sans md:px-3 md:py-2 rounded-xl">
+            <option value="yearly">Yearly</option>
+            <option value="monthly">Monthly</option>
+            <option value="weekly">Weekly</option>
+          </select>
+        </div>
+        <div class="w-full" id="userActivity"></div>
+      </div>
+      <div class="spacer basis-0 lg:basis-2/5"></div>
+    </div>
+    <!-- end -->
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="./js/admin_dash.js"></script>
+</body>
+
+</html>
